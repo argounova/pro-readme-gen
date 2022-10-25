@@ -1,12 +1,12 @@
-# METAL EARTH
+# MIDNIGHT OIL
 
 ## Description
 
-Small metal pieces combine to form a giant monster truck
+A yellow coffee mug with a Camaro on it.
 
-- Do something challenging
-- Skill
-- Lots
+- It looks cool.
+- A stylish way to drink coffee.
+- Cars are cool
 
 ## Table of Contents
 
@@ -17,11 +17,11 @@ Small metal pieces combine to form a giant monster truck
 
 ## Installation
 
-Open and assemble
+None required
 
 ## Usage
 
-Assemble
+Drink
 
 ![application screenshot](day-planner-screenshot.png)
 
@@ -31,9 +31,11 @@ None
 
 ## License
 
-MIT License
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Apache License 2.0
 
 ## Questions
 
-Email: put@put.com
-GitHub Profile: https://github.com/argo
+- Email: putzstuck@gmail.com
+- GitHub Profile: https://github.com/argounova

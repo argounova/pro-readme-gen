@@ -10,6 +10,7 @@ let usage = '';
 let screenshot = '';
 let credits = '';
 let license = '';
+let licenseBadge = '';
 let email = '';
 let githubUser = '';
 
@@ -64,7 +65,7 @@ questions
         type: 'list',
         name: 'license',
         message: 'Choose a license if applicable.',
-        choices: ['MIT License','Apache License 2.0','GPL License','BSD License(2-clause)','BSD License(3-clause)','BSD License(4-clause)'],
+        choices: ['MIT License','Apache License 2.0','GPL License'],
     },
     {
         type: 'input',
@@ -91,6 +92,19 @@ questions
         license = answers.license;
         email = answers.email;
         githubUser = answers.githubUser;
+
+        switch (license) {
+            case 'MIT License':
+                licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+                break;
+            case 'Apache License 2.0':
+                licenseBadge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+                break;
+            case 'GPL License':
+                licenseBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+                break;
+        }
+
         fs.writeFileSync('readme.md', projectTitle+'\n', err => {
         if (err) {
             console.log(err);
@@ -158,6 +172,11 @@ questions
                 }
             });
         fs.appendFileSync('readme.md', ('\n'+'## License'+'\n'), err => {
+            if (err) {
+                console.log(err);
+                }
+            });
+        fs.appendFileSync('readme.md', ('\n'+licenseBadge+'\n'), err => {
             if (err) {
                 console.log(err);
                 }
