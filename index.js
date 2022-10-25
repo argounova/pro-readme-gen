@@ -9,6 +9,8 @@ let installation = '';
 let usage = '';
 let credits = '';
 let license = '';
+let email = '';
+let githubUser = '';
 
 questions
   .prompt([
@@ -45,7 +47,7 @@ questions
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions for use.',
+        message: 'Provide instructions for use:',
     },
     {
         type: 'input',
@@ -53,9 +55,20 @@ questions
         message: 'List your collaborators and/or any third party assets.',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'Provide a license if applicable.',
+        message: 'Choose a license if applicable.',
+        choices: ['MIT License','Apache License 2.0','GPL License','BSD License(2-clause)','BSD License(3-clause)','BSD License(4-clause)'],
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email address:',
+    },
+    {
+        type: 'input',
+        name: 'githubUser',
+        message: 'Please enter your GitHub username:',
     },
   ])
   .then((answers) => {
@@ -69,7 +82,8 @@ questions
         usage = answers.usage;
         credits = answers.credits;
         license = answers.license;
-        console.log(projectTitle);
+        email = answers.email;
+        githubUser = answers.githubUser;
         fs.writeFileSync('readme.md', projectTitle+'\n', err => {
         if (err) {
             console.log(err);
@@ -90,6 +104,17 @@ questions
                 console.log(err);
                 }
             });
+        fs.appendFileSync('readme.md', (
+            ('\n'+'## Table of Contents'+'\n')+
+            (`\n- [Installation](#installation)\n`)+
+            (`- [Usage](#usage)\n`)+
+            (`- [Credits](#credits)\n`)+
+            (`- [License](#license)\n`)
+            ), err => {
+            if (err) {
+                console.log(err);
+                }
+            });    
         fs.appendFileSync('readme.md', ('\n'+'## Installation'+'\n'), err => {
             if (err) {
                 console.log(err);
@@ -126,6 +151,21 @@ questions
                 }
             });
         fs.appendFileSync('readme.md', ('\n'+license+'\n'), err => {
+            if (err) {
+                console.log(err);
+                }
+            });
+        fs.appendFileSync('readme.md', ('\n'+'## Questions'+'\n'), err => {
+            if (err) {
+                console.log(err);
+                }
+            });
+        fs.appendFileSync('readme.md', ('\n'+'Email: '+email+'\n'), err => {
+            if (err) {
+                console.log(err);
+                }
+            });
+        fs.appendFileSync('readme.md', ('GitHub Profile: '+'https://github.com/'+githubUser), err => {
             if (err) {
                 console.log(err);
                 }

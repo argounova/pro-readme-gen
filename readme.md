@@ -1,24 +1,37 @@
-# PROFESSIONAL README GENERATOR
+# S
 
 ## Description
 
-This application is meant to dynamically create the content for a readme.md file.
+s
 
-- Had to!
-- Time
-- That I don't know what I'm doing.
+- s
+- s
+- ss
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
 ## Installation
 
-Open CLI and execute the application.
+s
 
 ## Usage
 
-Press GO
+s
 
 ## Credits
 
-None
+s
 
 ## License
 
-MIT
+MIT License
+
+## Questions
+
+Email: s
+GitHub Profile: https://github.com/s
