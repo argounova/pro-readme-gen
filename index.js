@@ -7,6 +7,7 @@ let description2 = '';
 let description3 = '';
 let installation = '';
 let usage = '';
+let screenshot = '';
 let credits = '';
 let license = '';
 let email = '';
@@ -51,8 +52,13 @@ questions
     },
     {
         type: 'input',
+        name: 'screenshot',
+        message: 'Provide a file pathway for your screenshot:',
+    },
+    {
+        type: 'input',
         name: 'credits',
-        message: 'List your collaborators and/or any third party assets.',
+        message: 'List your collaborators and/or any third party assets:',
     },
     {
         type: 'list',
@@ -80,6 +86,7 @@ questions
         description3 = answers.description3;
         installation = answers.installation;
         usage = answers.usage;
+        screenshot = answers.screenshot;
         credits = answers.credits;
         license = answers.license;
         email = answers.email;
@@ -135,6 +142,11 @@ questions
                 console.log(err);
                 }
             });
+        fs.appendFileSync('readme.md', ('\n'+'![application screenshot]('+screenshot+')'+'\n'), err => {
+            if (err) {
+                console.log(err);
+                }
+            });
         fs.appendFileSync('readme.md', ('\n'+'## Credits'+'\n'), err => {
             if (err) {
                 console.log(err);
@@ -160,12 +172,12 @@ questions
                 console.log(err);
                 }
             });
-        fs.appendFileSync('readme.md', ('\n'+'Email: '+email+'\n'), err => {
+        fs.appendFileSync('readme.md', ('\n'+'- Email: '+email+'\n'), err => {
             if (err) {
                 console.log(err);
                 }
             });
-        fs.appendFileSync('readme.md', ('GitHub Profile: '+'https://github.com/'+githubUser), err => {
+        fs.appendFileSync('readme.md', ('- GitHub Profile: '+'https://github.com/'+githubUser), err => {
             if (err) {
                 console.log(err);
                 }

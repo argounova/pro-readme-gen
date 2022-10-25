@@ -1,12 +1,12 @@
-# S
+# METAL EARTH
 
 ## Description
 
-s
+Small metal pieces combine to form a giant monster truck
 
-- s
-- s
-- ss
+- Do something challenging
+- Skill
+- Lots
 
 ## Table of Contents
 
@@ -17,15 +17,17 @@ s
 
 ## Installation
 
-s
+Open and assemble
 
 ## Usage
 
-s
+Assemble
+
+![application screenshot](day-planner-screenshot.png)
 
 ## Credits
 
-s
+None
 
 ## License
 
@@ -33,5 +35,5 @@ MIT License
 
 ## Questions
 
-Email: s
-GitHub Profile: https://github.com/s
+Email: put@put.com
+GitHub Profile: https://github.com/argo
