@@ -1,12 +1,12 @@
-# PASSWORD GENERATOR
+# PROFESSIONAL NODE.JS README GENERATOR
 
 ## Description
 
-A simple and effective application for creating unique passwords with character categories you choose.
+This is a CLI based application built on Node.js that helps the user to create a professional README.md file.
 
-- To create something quick and easy for generating passwords.
-- It can be challenging to think of a unique password that meets certain criteria.  This helps solve that!
-- Lots of JavaScript!
+- This is meant to practice module skills but also makes creating a README for future projects much simpler.
+- Plain and simple, it saves time!
+- Primarily how to utilize the fs.writeFile and fs.appendFile methods.
 
 ## Table of Contents
 
@@ -17,17 +17,17 @@ A simple and effective application for creating unique passwords with character 
 
 ## Installation
 
-Copy and paste the URL into your favorite browser.
+Clone the repository code and install inquirer v8.2.4
 
 ## Usage
 
-Click the Generate Password button and follow the prompts.
+Initiate the application via the CLI by typing 'node index.js' and hitting Enter. Then answer the questions.
 
-![application screenshot](password-generator-screenshot.png)
+![application screenshot](readme-gen-screenshot.png)
 
 ## Credits
 
-Google Fonts
+N/A
 
 ## License
 
